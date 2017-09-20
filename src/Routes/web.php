@@ -2,6 +2,7 @@
 Route::group([
     'namespace'     =>  'AccessManager\Routers\Http\Controllers',
     'prefix'        =>  'routers',
+    'middleware'    =>      'auth',
 ], function(){
     Route::get('/', [
         'as'    =>  'routers.index',
