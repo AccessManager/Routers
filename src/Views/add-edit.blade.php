@@ -24,6 +24,11 @@
                 </div>
                 <div class="form-group">
                     <div class="col-md-10">
+                        {!! Form::text('shortname', NULL, ['class'=>'form-control','placeholder'=>'Friendly Name']) !!}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-10">
                         {!! Form::text('nasname', NULL, ['class'=>'form-control','placeholder'=>'IP Address']) !!}
                     </div>
                 </div>
