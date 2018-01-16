@@ -25,7 +25,7 @@
                     {{$i}}
                 </td>
                 <td>
-                    {{$subnet->subnet}}
+                    {{$subnet->cidr}}
                 </td>
             </tr>
             @empty
