@@ -14,7 +14,7 @@ class CreateSubnetTable extends Migration
     {
         Schema::create('network_subnets', function(Blueprint $table){
             $table->increments('id');
-            $table->string('subnet');
+            $table->string('cidr');
         });
     }
 

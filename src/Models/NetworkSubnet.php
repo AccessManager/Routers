@@ -9,6 +9,6 @@ class NetworkSubnet extends AdminBaseModel
 {
     public $timestamps = false;
     protected $fillable = [
-        'subnet'
+        'cidr'
     ];
 }

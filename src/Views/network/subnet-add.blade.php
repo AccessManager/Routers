@@ -9,7 +9,7 @@
             <fieldset>
                 <div class="form-group">
                     <div class="col-md-10">
-                        {!! Form::text('subnet', NULL, ['class'=>'form-control','placeholder'=>'enter valid CIDR, ie. 192.168.1.0/24']) !!}
+                        {!! Form::text('cidr', NULL, ['class'=>'form-control','placeholder'=>'enter valid CIDR, ie. 192.168.1.0/24']) !!}
                     </div>
                 </div>
         <div class="form-group">
