@@ -37,4 +37,28 @@ Route::group([
             'uses'  =>  'RoutersController@postDelete',
         ]);
     });
+
+    Route::group([
+        'prefix'    =>  'subnet',
+    ], function(){
+        Route::get('/', [
+            'as'    =>  'subnet.index',
+            'uses'  =>  'SubnetController@getIndex',
+        ]);
+
+        Route::get('/add', [
+            'as'    =>  'subnet.add',
+            'uses'  =>  'SubnetController@getAdd',
+        ]);
+
+        Route::post('/add', [
+            'as'    =>  'subnet.add.post',
+            'uses'  =>  'SubnetController@postAdd',
+        ]);
+
+        Route::post('/delete', [
+            'as'    =>  'subnet.delete',
+            'uses'  =>  'SubnetController@postDelete',
+        ]);
+    });
 });
