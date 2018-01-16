@@ -21,7 +21,8 @@ class SubnetController extends AdminBaseController
 
     public function postAdd()
     {
-
+        NetworkSubnet::add(request()->get('cidr'));
+        return redirect()->route('subnet.index');
     }
 
     public function postDelete()
