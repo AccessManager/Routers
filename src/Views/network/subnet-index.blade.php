@@ -27,10 +27,16 @@
                 <td>
                     {{$subnet->cidr}}
                 </td>
+                <td>
+                    {!! Form::open(['route'=>'subnet.delete', 'onsubmit'=>"return confirm('are you sure?')"]) !!}
+                    {!! Form::hidden('id', $subnet->id) !!}
+                    <button type="submit" class="btn-xs btn btn-flat btn-danger">remove</button>
+                    {!! Form::close() !!}
+                </td>
             </tr>
             @empty
             <tr>
-                <td colspan="3">
+                <td colspan="4">
                     no records found.
                 </td>
             </tr>

@@ -27,6 +27,14 @@ class SubnetController extends AdminBaseController
 
     public function postDelete()
     {
-
+        try{
+            $subnet = NetworkSubnet::findOrFail(request()->id);
+            $subnet->delete();
+            return back();
+        }
+        catch (\Exception $e)
+        {
+            dd($e->getMessage());
+        }
     }
 }
