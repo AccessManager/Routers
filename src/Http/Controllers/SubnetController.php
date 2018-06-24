@@ -37,4 +37,21 @@ class SubnetController extends AdminBaseController
             dd($e->getMessage());
         }
     }
+
+    public function getIpListJson( $subnet_id )
+    {
+        try{
+            $subnet = NetworkSubnet::findOrFail($subnet_id);
+            $free_ips_long = $subnet->IPs()->whereNull('user_id')->pluck('address', 'id');
+            $free_ips = $free_ips_long->map(function($ip){
+                return long2ip($ip);
+            });
+
+            return $free_ips;
+        }
+        catch (\Exception $e)
+        {
+            dd($e->getMessage());
+        }
+    }
 }

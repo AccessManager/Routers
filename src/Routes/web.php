@@ -60,5 +60,10 @@ Route::group([
             'as'    =>  'subnet.delete',
             'uses'  =>  'SubnetController@postDelete',
         ]);
+
+        Route::get('/subnet-ips-json/{subnet_id?}', [
+            'as'    =>  'subnet.ip.json',
+            'uses'  =>  'SubnetController@getIpListJson',
+        ]);
     });
 });
